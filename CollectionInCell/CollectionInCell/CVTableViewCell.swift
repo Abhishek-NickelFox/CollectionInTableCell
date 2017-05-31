@@ -41,7 +41,9 @@ class CVTableViewCell: TableCell {
     }
     
     override func configure(item: Any?) {
-        
+        let superModel = item as! CellSuperModel
+        let model = superModel.topItem
+        self.collectionArray = model
     }
 }
 

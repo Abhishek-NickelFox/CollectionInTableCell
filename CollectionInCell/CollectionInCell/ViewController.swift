@@ -67,8 +67,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CVTableViewCell") as! CVTableViewCell
-        let modelArray = tableArray?[indexPath.row]
-        cell.collectionArray = modelArray?.topItem
+//        let modelArray = tableArray?[indexPath.row]
+        cell.configure(item: tableArray?[indexPath.row])
+//        cell.collectionArray = modelArray?.topItem
         
         return cell
     }
